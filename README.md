@@ -186,7 +186,7 @@ public class MyJsonTest {
 ### 自动化配置的Spring MVC测试
 `@WebMvcTest`可以用来测试Spring MVC的控制器是否工作正常。自动化配置会加载`@Controller`，`@ControllerAdvice`，`@JsonComponent`，`Converter`，`GenericConverter`，`Filter`，`WebMvcConfigurer`，`HandlerMethodArgumentResolver`等组件，但是上下文中基于`@Component`注解的bean将**不会被扫描到**。  
 
-> **Notes: **如果需要加载其他额外的组件，例如刚才说到的基于`@Component`注解的组件，可以使用`@Import`类注解来帮助我们加载需要加载的类。  
+> Notes: 如果需要加载其他额外的组件，例如刚才说到的基于`@Component`注解的组件，可以使用`@Import`类注解来帮助我们加载需要加载的类。  
 
 一般而言，一个`@WebMvcTest`之对应于单一个Controller，并且利用`@MockBean`进行请求合并。`@WebMvcTest`自动加载了`MockMvc`，因此我们能够快速测试MVC控制器而不需要启动一个完整的HTTP服务器。
 下面是一个基于`@WebMvcTest`的例子：
