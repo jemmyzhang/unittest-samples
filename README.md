@@ -1,4 +1,4 @@
-# Spring 单元测试指南 #
+# Spring Boot单元测试指南 #
 单元测试是编写测试代码，用来检测特定的、明确的、细颗粒的功能。Spring Boot提供了多种工具包和注解来帮助用户对应用进行单元测试。Spring Boot测试支持由下面两个模块提供：`spring-boot-test`包含了核心组件，而`spring-boot-test-autoconfigure`则能够提供自动化的配置。  
 
 一般情况下，开发者可以在POM通过添加`spring-boot-starter-test`来支持单元测试。  
