@@ -1,5 +1,6 @@
 # Spring 单元测试指南 #
 单元测试是编写测试代码，用来检测特定的、明确的、细颗粒的功能。Spring Boot提供了多种工具包和注解来帮助用户对应用进行单元测试。Spring Boot测试支持由下面两个模块提供：`spring-boot-test`包含了核心组件，而`spring-boot-test-autoconfigure`则能够提供自动化的配置。  
+
 一般情况下，开发者可以在POM通过添加`spring-boot-starter-test`来支持单元测试。  
 
 ## 相关概念
@@ -37,6 +38,7 @@
 
 ## 测试Spring Boot的应用 ##
 Spring Boot应用包含了Spring的应用上下文。如果您在测试的时候需要使用到Spring Boot的特性或者Spring的应用上下文，Spring Boot提供了一种`@SpringBootTest`注解，可以帮助您运行并测试Spring应用。  
+
 您还可以通过`@SpringBootTest`注解的`webEnvironment`属性来改变运行的属性。  
 
 * `MOCK`：该模式应用会装载`WebApplicationContext`并提供一个虚拟的Servlet环境。内置的Servlet容器不会被启动。如果Classpath中没有Servlet API，该模式会启动一个非WEB的普通`ApplicationContext`。
@@ -112,6 +114,7 @@ public class MyUnitTest {
 
 ### Mock Bean和Spy Bean
 上文的例子中包含了`@MockBean`注解和`@SpyBean`注解（注释中）。所谓的Mock测试，指的是在测试过程中，对于某些不容易构造或者不容易获取的对象，用一个虚拟的对象来创建以便测试的测试方法。Mock测试同时可以对某些现实环境中难以触发的失败情形进行测试。  
+
 `@MockBean`注解能够定义一个bean为虚拟形式，该注解能够直接作用于类对属性或者配置类。Mock bean会在每一个`@Test`测试方法执行以后被自动重置。在上面的例子中，我们虚拟了一个`UserService`的一个方法，使之能够返回一个虚拟的`User`对象，并为`User`对象赋予特定的属性值。这样在服务被调用时，返回的对象就是我们预先定义好的返回值。
 
 ```java
