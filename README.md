@@ -1,9 +1,8 @@
-# Spring 单元测试教程 #
-## 概述 ##
-单元测试是编写测试代码，用来检测特定的、明确的、细颗粒的功能。单元测试并不一定保证程序功能是正确的，更不保证整体业务是准备的。
-
-单元测试不仅仅用来保证当前代码的正确性，更重要的是用来保证代码修复、改进或重构之后的正确性。
-
+# Spring 单元测试指南 #
+<br />
+## 概述
+单元测试是编写测试代码，用来检测特定的、明确的、细颗粒的功能。单元测试并不一定保证程序功能是正确的，更不保证整体业务是准备的。  
+单元测试不仅仅用来保证当前代码的正确性，更重要的是用来保证代码修复、改进或重构之后的正确性。  
 一般来说，单元测试任务包括：
 1. 接口功能测试：用来保证接口功能的正确性。
 2. 局部数据结构测试（不常用）：用来保证接口中的数据结构是正确的
@@ -343,7 +342,7 @@ public class ExampleRestClientTest {
 ```
 由于RestService依赖RestTemplate，而`@RestClientTest`不会自动加载带有`@Component`注解的组件，因此需要使用（1）中的@Import注入，并且在（2）中配置到MockServerRestTemplateCustomizer中。mockRestServiceServer能够虚拟请求的一个返回结果，而不会真正调用REST接口。
 
-##参考文献
+## 参考文献
 > https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-testing.html  
 > https://blog.csdn.net/dc_726/article/details/8713236   
 > https://www.cnblogs.com/AloneSword/p/4109407.html  
