@@ -242,7 +242,7 @@ public class MyControllerTest {
 以下是一个REST调用的例子：  
 首先定义了一个Service类：
 
-```JAVA
+```java
 package pers.jz.unittest.service;
 
 import org.springframework.stereotype.Service;
@@ -267,7 +267,7 @@ public class RestService {
 
 并在WebConfig文件里实例化了一个RestTemplate:
 
-```JAVA
+```java
 package pers.jz.unittest.config;
 
 import org.springframework.context.annotation.Bean;
@@ -288,7 +288,7 @@ public class WebConfig {
 ```
 REST测试类如下：
 
-```JAVA
+```java
 package pers.jz.unittest.test;
 
 import org.junit.Test;
