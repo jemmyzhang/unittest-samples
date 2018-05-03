@@ -48,8 +48,8 @@ Spring Boot应用包含了Spring的应用上下文。如果您在测试的时候
 
 **注意：**
 
-> * 除了`@SpringBootTest`还有很多其他的注解，为单元测试提供更多个性化的测试。  
-> * 不要忘记添加`@RunWith(SpringRunner.class)`注解，不然其他注解将会被忽略。  
+> 除了`@SpringBootTest`还有很多其他的注解，为单元测试提供更多个性化的测试。  
+> 不要忘记添加`@RunWith(SpringRunner.class)`注解，不然其他注解将会被忽略。  
 
 下例是测试一个可运行的Server应用。
 
